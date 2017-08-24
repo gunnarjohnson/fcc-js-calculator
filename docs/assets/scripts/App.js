@@ -7,11 +7,11 @@ var numArr = [];
 
 // Executes when On/Off button is clicked on calculator keypad
 function onOff() {
-  if (document.getElementById("calc-display--number").innerHTML == "") {
-    document.getElementById("calc-display--number").innerHTML = "0";
+  if (document.getElementById("calc-display__number").innerHTML == "") {
+    document.getElementById("calc-display__number").innerHTML = "0";
   }
   else {
-    document.getElementById("calc-display--number").innerHTML = "";
+    document.getElementById("calc-display__number").innerHTML = "";
     activeNum = undefined;
     decimalPresent = false;
     finalNum = undefined;
@@ -19,25 +19,25 @@ function onOff() {
     numArr = [];
   }
 }
-  
+
 // Executes when number is clicked on calculator keypad
 function clickNum(keypadNum) {
   // If activeNum has a value of "0", then that value is replaced with keypad's number value - calculator displays activeNum
   if (activeNum == "0" || activeNum == undefined) {
     activeNum = keypadNum;
-    document.getElementById("calc-display--number").innerHTML = activeNum;
+    document.getElementById("calc-display__number").innerHTML = activeNum;
   }
   // If activeNum length exceeds 8, activeNum and decimalPresent set to original values - calculator shakes and displays "Error"
   else if (activeNum !== undefined && activeNum.length >= 8) {
     activeNum = undefined;
     decimalPresent = false;
-    $(".calc-body--outline").effect( "shake", {times:2}, 300 );
-    document.getElementById("calc-display--number").innerHTML = "Error";
-  } 
+    $(".calc-body").effect( "shake", {times:2}, 300 );
+    document.getElementById("calc-display__number").innerHTML = "Error";
+  }
   // activeNum isn't "0" or undefined and activeNum length is <= 8, so keypadNum is added to activeNum - calculator displays activeNum
   else {
     activeNum += keypadNum;
-    document.getElementById("calc-display--number").innerHTML = activeNum;
+    document.getElementById("calc-display__number").innerHTML = activeNum;
   }
 }
 
@@ -47,13 +47,13 @@ function clickDecimal(keypadDecimal) {
   if (activeNum == undefined && decimalPresent == false) {
     activeNum = "0.";
     decimalPresent = true;
-    document.getElementById("calc-display--number").innerHTML = activeNum;
+    document.getElementById("calc-display__number").innerHTML = activeNum;
   }
   // If activeNum isn't undefined and no decimal is present, "." is added to activeNum - calculator displays activeNum
   else if (activeNum !== undefined && decimalPresent == false) {
     activeNum += ".";
     decimalPresent = true;
-    document.getElementById("calc-display--number").innerHTML = activeNum;
+    document.getElementById("calc-display__number").innerHTML = activeNum;
   }
 }
 
@@ -63,13 +63,13 @@ function clickOperator(keypadOperator) {
   if (activeNum !== undefined) {
     numArr.push(Number(activeNum), keypadOperator);
     // Calculator displays keypadOperator (clicked operator)
-    document.getElementById("calc-display--number").innerHTML = keypadOperator;
+    document.getElementById("calc-display__number").innerHTML = keypadOperator;
   }
   // If activeNum is undefined and finalNum isn't undefined, finalNum is pushed to numArr, along with the clicked operator
   else if (activeNum == undefined && mathDone == true) {
     numArr.push(finalNum, keypadOperator);
     // Calculator displays keypadOperator (clicked operator)
-    document.getElementById("calc-display--number").innerHTML = keypadOperator;
+    document.getElementById("calc-display__number").innerHTML = keypadOperator;
   }
   //  activeNum, decimalPresent and mathDone are set to original values
   activeNum = undefined;
@@ -84,14 +84,14 @@ function clearMemory(button) {
     finalNum = undefined;
     mathDone = false;
     numArr = [];
-    document.getElementById("calc-display--number").innerHTML = "0";
+    document.getElementById("calc-display__number").innerHTML = "0";
   }
   else if (button == "error") {
     if (numArr.length > 0) {
-      document.getElementById("calc-display--number").innerHTML = numArr[numArr.length - 1];
+      document.getElementById("calc-display__number").innerHTML = numArr[numArr.length - 1];
     }
     else {
-      document.getElementById("calc-display--number").innerHTML = "0";
+      document.getElementById("calc-display__number").innerHTML = "0";
     }
   }
   // In both cases (CE & C), activeNum and decimalPresent are set to original values - calculator displays "0"
@@ -119,7 +119,7 @@ function clickEquals()  {
     if (finalNum.toString().length > 8) {
       // Calculator shakes and displays "Error"
       $(".calc-body--outline").effect( "shake", {times:2}, 300 );
-      document.getElementById("calc-display--number").innerHTML = "Error";  
+      document.getElementById("calc-display__number").innerHTML = "Error";
       // finalNum and mathDone are set to original value
       finalNum = undefined;
       mathDone = false;
@@ -127,7 +127,7 @@ function clickEquals()  {
     // finalNum is less 8 characters - mathDone is true - calculator displays finalNum
     else {
       mathDone = true;
-      document.getElementById("calc-display--number").innerHTML = finalNum;  
+      document.getElementById("calc-display__number").innerHTML = finalNum;
     }
   }
 }

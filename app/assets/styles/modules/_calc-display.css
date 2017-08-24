@@ -1,0 +1,30 @@
+.calc-display {
+  display: flex;
+  align-items: center;
+
+  &__row {
+    justify-content: center;
+    height: 60px;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -15px 40px -10px #564c3f;
+    background-color: #000000;
+    transform: rotateX(40deg) translate(0, 9px);
+  }
+
+  &__laser {
+    justify-content: flex-end;
+    height: 100%;
+    width: 250px;
+    margin: 0 5px 0 5px;
+    padding: 0;
+    box-shadow: inset 0 5px 30px 0.1px #000000;
+    background-color: #351113;
+    color: #e55e5a;
+    font-family: "digital-7regular";
+    font-size: 300%;
+    letter-spacing: 7.5px;
+  }
+}

@@ -1,0 +1,28 @@
+.calc-body {
+  display: flex;
+  position: fixed;
+  top: 10%;
+  align-items: center;
+  flex-direction: column;
+  flex: none;
+  width: 350px;
+  margin: auto;
+  padding: 125px 0 25px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px 2px #292928, inset 0 0 30px 0.1px #6F5F4C;
+  background-color: $mainTan;
+
+  @mixin atVerySmall {
+    top: 30%;
+    transform: scale(2);
+  }
+
+  @mixin atSmall {
+    top: 20%;
+    transform: scale(1.35);
+  }
+
+  @mixin atMedium {
+    transform: none;
+  }
+}

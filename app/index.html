@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Overpass+Mono:semi-bold' type:'text/css'>
+  <title>TI-2511 Calculator</title>
+
+  <link rel="stylesheet" href="./temp/styles/styles.css">
+
+</head>
+
+<body>
+  <body>
+  <div class="calc-body">
+    <div class="calc-display calc-display__row">
+      <div class="calc-display calc-display__laser">
+        <p id="calc-display__number">0</p>
+      </div>
+    </div>
+    <div class="calc-title__row">
+      <img class="calc-title__logo calc-title--no-select" src="./assets/images/tilogo-gold.png" alt="TI Logo">
+      <h3 class="calc-title__text calc-title--no-select">TI-2511</h3>
+    </div>
+    <div class="calc-button calc-button__row calc-button__row--top">
+      <input class="calc-button__square calc-button__square--tan"  onclick="clearMemory('error')" type="button" value="CE"></input>
+      <input class="calc-button__square calc-button__square--tan" onclick="clickOperator('/')" type="button" value="÷"></input>
+      <input class="calc-button__square calc-button__square--tan" onclick="clickOperator('*')" type="button" value="x"></input>
+      <input class="calc-button__square calc-button__square--dark" onclick="onOff()" type="button" value="On/Off"></input>
+    </div>
+    <div class="calc-button calc-button__row">
+      <input class="calc-button__square calc-button__square--light"  onclick="clickNum('7')" type="button" value="7"></input>
+      <input class="calc-button__square calc-button__square--light"  onclick="clickNum('8')" type="button" value="8"></input>
+      <input class="calc-button__square calc-button__square--light" onclick="clickNum('9')" type="button" value="9"></input>
+      <input class="calc-button__square calc-button__square--tan"  onclick="clearMemory('all')" type="button" value="C"></input>
+    </div>
+    <div class="calc-button calc-button__row">
+      <input class="calc-button__square calc-button__square--light" onclick="clickNum('4')" type="button" value="4"></input>
+      <input class="calc-button__square calc-button__square--light" onclick="clickNum('5')" type="button" value="5"></input>
+      <input class="calc-button__square calc-button__square--light" onclick="clickNum('6')" type="button" value="6"></input>
+      <input class="calc-button__square calc-button__square--tan" onclick="clickOperator('-')" type="button" value="-"></input>
+    </div>
+    <div class="calc-button calc-button__row">
+      <input class="calc-button__square calc-button__square--light" onclick="clickNum('1')" type="button" value="1"></input>
+      <input class="calc-button__square calc-button__square--light" onclick="clickNum('2')" type="button" value="2"></input>
+      <input class="calc-button__square calc-button__square--light" onclick="clickNum('3')" type="button" value="3"></input>
+      <input class="calc-button__square calc-button__square--tan" onclick="clickOperator('+')" type="button" value="+"></input>
+    </div>
+    <div class="calc-button calc-button__row calc-button__row--bottom">
+      <input class="calc-button__rectangle calc-button__rectangle--light" onclick="clickNum('0')" type="button" value="0"></input>
+      <input class="calc-button__square calc-button__square--light" onclick="clickDecimal('.')" type="button" value="."></input>
+      <input class="calc-button__rectangle calc-button__rectangle--orange" onclick="clickEquals()" type="button" value="="></input>
+    </div>
+  </div>
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+
+<script src="./assets/scripts/modules/Calculator.js"></script>
+
+</body>
+</html>

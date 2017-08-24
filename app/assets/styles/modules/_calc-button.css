@@ -1,0 +1,79 @@
+.calc-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__row {
+    width: 300px;
+    margin: 0;
+    padding: 5px 0 5px 0;
+    background-color: $mainGray;
+
+    &--top {
+      padding: 10px 0 5px 0;
+    }
+
+    &--bottom {
+      padding: 5px 0 10px 0;
+      border-radius: 0 0 2px 2px;
+    }
+  }
+
+  &__square {
+    margin: 0 5px 0 5px;
+    padding: 0;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 2px;
+    font-family: "Overpass Mono";
+    font-size: 200%;
+
+    &:active {
+      box-shadow: 0px 0px 2px 2px $mainBlack;
+      transform: scale(0.97, 0.97);
+    }
+
+    &--dark {
+      box-shadow: 0px 0px 1px 1px $mainBlack, inset 0 0 5px 3px #0f0e13;
+      background-color: $mainGray;
+      font-size: 70%;
+    }
+
+    &--light {
+      box-shadow: 0px 0px 1px 1px $mainBlack, inset 0 0 5px 3px $mainTeal;
+      background-color: $mainWhite;
+    }
+
+    &--tan {
+      box-shadow: 0px 0px 1px 1px $mainBlack, inset 0 0 5px 3px #99957c;
+      background-color: $mainTan;
+    }
+  }
+
+  &__rectangle {
+    margin: 0 5px 0 5px;
+    padding: 0;
+    height: 60px;
+    width: 95px;
+    border: none;
+    border-radius: 2px;
+    font-family: "Overpass Mono", serif;
+    font-size: 200%;
+
+    &:active {
+      box-shadow: 0px 0px 2px 2px $mainBlack;
+      transform: scale(0.97, 0.97);
+    }
+
+    &--light {
+      box-shadow: 0px 0px 1px 1px $mainBlack, inset 0 0 5px 3px $mainTeal;
+      background-color: $mainWhite;
+    }
+
+    &--orange {
+      box-shadow: 0px 0px 1px 1px $mainBlack, inset 0 0 5px 3px #d2560c;
+      background-color: #fc7644;
+    }
+  }
+}

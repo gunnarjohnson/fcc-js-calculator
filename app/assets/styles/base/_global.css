@@ -1,0 +1,18 @@
+@font-face {
+  font-family:"digital-7regular";
+  src: url("../fonts/digital-7.ttf");
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #FFF0E1;
+}
