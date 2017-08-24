@@ -1,0 +1,18 @@
+@font-face {
+  font-family:"digital-7regular";
+  src: url("https://dl.dropbox.com/s/vtezdcbkk3si2pq/digital-7.ttf?dl=0")
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #FFF0E1;
+}
