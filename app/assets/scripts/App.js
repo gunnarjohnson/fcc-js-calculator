@@ -1,1 +1,1 @@
-var Index = require('./modules/Index');
+var Calculator = require('./modules/Calculator');
