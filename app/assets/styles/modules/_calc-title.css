@@ -1,4 +1,6 @@
-.calc-title__row {
+.calc-title {
+
+  &__row {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -11,14 +13,25 @@
   color: #f7db7b;
   font-family: Arial;
   letter-spacing: 1px;
-}
+  }
 
-.calc-title__logo {
+  &__logo {
   height: 20px;
   width: 20px;
   margin: 0 0 0 68px;
-}
+  }
 
-.calc-title__text {
+  &__text {
   margin: 0 10px 0 0;
+  cursor: default;
+  }
+
+  &--no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+  }
 }
