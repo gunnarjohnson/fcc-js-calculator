@@ -11,8 +11,17 @@ input:focus {
   outline: none;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: [col-1] 1fr [col-2] 90% [col-3] 1fr [col-4];
+  grid-template-rows: [row-1] 5% [row-2] 90% [row-3] 5%;
+  grid-column-gap: 0;
+  height: 100%;
+  width: 100%;
   background-color: #FFF0E1;
 }

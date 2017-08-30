@@ -1,5 +1,5 @@
 @define-mixin atVerySmall {
-  @media (min-width: 320px) {
+  @media (min-width: 375px) {
     @mixin-content;
   }
 }

@@ -1,0 +1,6 @@
+#calc-box {
+  grid-column: col-2 / span col-3;
+  grid-row: row-2 / span row-3;
+  align-self: center;
+  justify-self: center;
+}
