@@ -1,6 +1,6 @@
 @font-face {
-  font-family:"digital-7regular";
-  src: url("../fonts/digital-7.ttf");
+  font-family:"digital-7mono";
+  src: url("../fonts/digital-7.mono.ttf");
 }
 
 input {
@@ -23,5 +23,5 @@ body {
   grid-column-gap: 0;
   height: 100%;
   width: 100%;
-  background-color: #FFF0E1;
+  background-color: #ffffff;
 }
